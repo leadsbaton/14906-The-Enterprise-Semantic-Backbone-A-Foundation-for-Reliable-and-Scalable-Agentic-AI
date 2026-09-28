@@ -7,25 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ MEDIA QUERY FIX -->
-  <style>
-    /* Default */
-    .mobile-heading {
-      display: none;
-    }
-
-    /* Mobile only */
-    @media (max-width: 767px) {
-      .mobile-heading {
-        display: block;
-        margin-bottom: 1.5rem;
-      }
-
-      .desktop-heading {
-        display: none;
-      }
-    }
-  </style>
 </head>
 
 <body class="bg-white font-sans">
@@ -33,43 +14,40 @@
   <!-- Navbar -->
   <div id="navbar"></div>
 
-  <div class="max-w-4xl mx-auto mt-10 px-6">
-
-    <!-- ✅ MOBILE HEADING (TOP ONLY ON MOBILE) -->
-    <h1 class="mobile-heading text-3xl font-semibold leading-snug">
+  <main class="max-w-4xl mx-auto mt-10 px-6">
+    <h1 class="mx-auto mb-5 max-w-3xl text-center text-xl font-semibold leading-tight">
       The Enterprise Semantic Backbone: A Foundation for Reliable and Scalable Agentic AI
     </h1>
 
-    <!-- TOP ROW (MATCHING SCREENSHOT LAYOUT) -->
-    <div class="flex flex-col md:flex-row gap-10 md:items-center items-start">
-      <!-- Left: Image and Button -->
-      <div class="md:w-1/4 flex flex-col items-center">
-        <iframe src="assets/images/143.pdf#page=1&toolbar=0&navpanes=0" title="The Enterprise Semantic Backbone white paper cover" class="w-full h-64 border border-gray-300 mb-4"></iframe>
-        <button id="getEbookBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 font-semibold w-full">Download PDF</button>
-      </div>
-      <!-- Right: Heading and Single Paragraph -->
-      <div class="md:w-3/4">
-        <!-- ✅ DESKTOP HEADING -->
-        <h1 class="desktop-heading text-3xl font-semibold leading-snug mb-4 text-left">The Enterprise Semantic Backbone: A Foundation for Reliable and Scalable Agentic AI</h1>
-        <p class="text-gray-800 mb-4 text-left font-medium">Enterprise AI has hit a wall. While 74% of organizations are investing heavily, execution remains shallow: only 28% have deployed an enterprise-wide AI strategy, and 95% report zero return on initial GenAI investments.</p>
-        <p class="mb-4">To investigate this gap, MarketsandMarkets surveyed 380+ enterprise leaders alongside independent benchmarks to determine the precise architecture required to scale autonomous, agentic AI. The research revealed a massive system fragmentation bottleneck: organizations manage an average of 957 applications, leaving half of all AI agents operating in isolated silos because they lack unified, machine-executable context.</p>
-        <p class="mb-4">This white paper outlines a critical architectural shift from temporary overlays to a graph-based, vendor-lock-in-free knowledge infrastructure. The study reveals that standard context layers and thin BI semantic layers (like the OSI initiative) leave agents dependent on inconsistent LLM guessing.</p>
-        <p class="mb-4">Instead, it highlights how Graphwise delivers a standards-based Semantic Backbone built on W3C graph standards (RDF/OWL/SKOS). By pairing this with an operational “dashcam” called the Context Graph and executing SHACL constraints via platforms like Graphwise, this infrastructure achieves 100% explainable reasoning, a 2x accuracy boost over schema-less RAG, and a 70% to 90% reduction in AI hallucinations.</p>
-        <p class="mb-4">Download this white paper to discover the exact structural roadmap your organization needs to establish a good foundation, activate autonomous enterprise intelligence, and successfully deploy trusted, scalable Agentic AI.</p>
-
-      </div>
+    <div class="mb-6 text-center">
+      <button id="getEbookBtn"
+        class="h-[22px] w-[164px] bg-red-600 text-xs font-semibold uppercase text-white hover:bg-red-700">Download
+        PDF</button>
     </div>
 
-  </div>
-
-
-  <!-- Bottom Center Button -->
-  <div class="text-center">
-    <button id="getEbookBtnBottom" class="text-red-600 font-semibold hover:underline">
-      Download PDF
-    </button>
-  </div>
-
+    <article class="text-[13px] leading-[1.15] sm:text-sm">
+      <img src="assets/images/image143a.png" alt="The Enterprise Semantic Backbone white paper cover"
+        class="float-right mb-2 ml-3 h-auto w-[40%]">
+      <p class="mb-4">Enterprise AI has hit a wall. While 74% of organizations are investing heavily, execution remains
+        shallow, only 28% have deployed an enterprise-wide AI strategy, and 95% report zero return on initial GenAI
+        investments. To investigate this gap, MarketsandMarkets surveyed 380+ enterprise leaders alongside independent
+        benchmarks to determine the precise architecture required to scale autonomous, agentic AI. The research revealed
+        a massive system fragmentation bottleneck: organizations manage an average of 957 applications, leaving half of
+        all AI agents operating in isolated silos because they lack unified, machine-executable context.</p>
+      <p class="mb-4">This white paper outlines a critical architectural shift from temporary overlays to a graph-based,
+        vendor-lock-in-free knowledge infrastructure. The study reveals that standard context layers and thin BI
+        semantic layers (like the OSI initiative) leave agents dependent on inconsistent LLM guessing. Instead, it
+        highlights how Graphwise delivers a standards-based Semantic Backbone built on W3C graph standards
+        (RDF/OWL/SKOS). By pairing this with an operational “dashcam” called the Context Graph and executing SHACL
+        constraints via platforms like Graphwise, this infrastructure achieves 100% explainable reasoning, a 2x accuracy
+        boost over schema-less RAG, and a 70% to 90% reduction in AI hallucinations.</p>
+      <p class="mb-4">Download this white paper to discover the exact structural roadmap your organization needs to
+        establish a good foundation, activate autonomous enterprise intelligence, and successfully deploy trusted,
+        scalable Agentic AI.</p>
+      <button id="getEbookBtnBottom" class="text-xs font-bold uppercase text-red-600 hover:underline">Download
+        PDF</button>
+    </article>
+  </main>
   <!-- Footer -->
   <div id="footer" class="mt-12"></div>
 
